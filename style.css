@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+.wrapper {
+	max-width: 780px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+input {
+	font-size: 16px;
+	padding: 4px;
+}
+
+.form-control {
+	margin-top: 1em;
+}
+
+.form-control label {
+	display: block;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.form-control input,
+.form-control textarea {
+	width: 100%;
+}
+
+.suggestion {
+	background-color: rgb(243, 243, 243);
+
+	color: #242424;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	overflow: hidden;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s linear;
+}
+
+.suggestion.show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.suggestion ul {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.suggestion li {
+	list-style: none;
+	padding: 5px 10px;
+	width: 100%;
+	text-align: left;
+	transition: all 0.1s linear;
+	cursor: pointer;
+}
+
+.suggestion li:hover {
+	background-color: #535bf2;
+}
